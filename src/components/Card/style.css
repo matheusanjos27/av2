@@ -1,0 +1,82 @@
+@import 'https://fonts.googleapis.com/css?family=Lily+Script+One';
+
+body {
+  background: #eee;
+  font-family: 'Lily Script One';
+}
+
+.card {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 10px;
+  float: left;
+  perspective: 500px;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.card-opened .content {
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #03446A;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #03446A;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal input {
+  margin-bottom: 10px;
+}
+
+.modal button {
+  margin-right: 10px;
+}
+
